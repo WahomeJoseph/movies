@@ -8,7 +8,7 @@ export const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setisLoading] = useState(true);
 
   useEffect(() => {
     const loadPopularMovies = async () => {
@@ -19,7 +19,7 @@ export const Home = () => {
         console.log(err);
         setError("Failed to load movies...");
       } finally {
-        setLoading(false);
+        setisLoading(false);
       }
     };
 
@@ -29,9 +29,9 @@ export const Home = () => {
   const handleSearch = async (e) => {
     e.preventDefault();
     if (!searchQuery.trim()) return;
-    if (loading) return;
+    if (isLoading) return;
 
-    setLoading(true);
+    setisLoading(true);
     try {
       const searchResults = await searchMovies(searchQuery);
       setMovies(searchResults);
@@ -40,7 +40,7 @@ export const Home = () => {
       console.log(err);
       setError("Failed to search movies...");
     } finally {
-      setLoading(false);
+      setisLoading(false);
     }
   };
 
@@ -61,7 +61,7 @@ export const Home = () => {
 
       {error && <div className="error-message text-red-500 text-center">{error}</div>}
 
-      {loading ? (
+      {isLoading ? (
         <div className="loading text-center text-white">Loading...</div>
       ) : (
         <div className="movies-grid grid gap-6 p-4 w-full box-border" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
