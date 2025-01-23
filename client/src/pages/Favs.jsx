@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useMovieContext } from "../contexts/MovieContext";
-import MovieCard from "../components/MovieCard";
+import { MovieCard } from "../components/MovieCard";
 
 export const Favorites = () => {
   const { favorites } = useMovieContext();
