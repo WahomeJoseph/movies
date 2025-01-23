@@ -1,7 +1,7 @@
 import {createContext, useState, useEffect} from "react"
 import PropTypes from 'prop-types'
 
-const MovieContext = createContext()
+const useMovieContext = createContext()
 
 export const MovieProvider = ({children}) => {
     const [favorites, setFavorites] = useState([])
@@ -39,7 +39,7 @@ export const MovieProvider = ({children}) => {
         isFavorite
     }
 
-    return <MovieContext.Provider value={value}>
+    return <useMovieContext.Provider value={value}>
         {children}
-    </MovieContext.Provider>
+    </useMovieContext.Provider>
 }
