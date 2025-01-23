@@ -1,14 +1,13 @@
-import {createContext, useState, useEffect} from "react"
+import { createContext, useState, useEffect } from "react"
 import PropTypes from 'prop-types'
 
-const useMovieContext = createContext()
+const MovieContext = createContext()
 
 export const MovieProvider = ({children}) => {
     const [favorites, setFavorites] = useState([])
 
     useEffect(() => {
         const storedFavs = localStorage.getItem("favorites")
-
         if (storedFavs) setFavorites(JSON.parse(storedFavs))
     }, [])
 
@@ -39,7 +38,7 @@ export const MovieProvider = ({children}) => {
         isFavorite
     }
 
-    return <useMovieContext.Provider value={value}>
+    return <MovieContext.Provider value={value}>
         {children}
-    </useMovieContext.Provider>
+    </MovieContext.Provider>
 }
