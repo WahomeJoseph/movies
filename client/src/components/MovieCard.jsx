@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import PropTypes from "prop-types";
 import { useMovieContext } from "../contexts/MovieContext";
 
 export const MovieCard = ({ movie }) => {
@@ -35,5 +36,14 @@ export const MovieCard = ({ movie }) => {
         <p className="text-gray-600 text-sm">{movie.release_date?.split("-")[0]}</p>
       </div>
     </div>
-  );
+)};
+
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    poster_path: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    release_date: PropTypes.string,
+  }).isRequired,
 };
+

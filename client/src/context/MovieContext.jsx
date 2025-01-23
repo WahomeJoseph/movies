@@ -1,4 +1,5 @@
 import {createContext, useState, useContext, useEffect} from "react"
+import PropTypes from 'prop-types'
 
 const MovieContext = createContext()
 
@@ -20,7 +21,11 @@ export const MovieProvider = ({children}) => {
     const addToFavorites = (movie) => {
         setFavorites(prev => [...prev, movie])
     }
-
+    
+    MovieProvider.propTypes = {
+        children: PropTypes.node.isRequired
+    }
+    
     const removeFromFavorites = (movieId) => {
         setFavorites(prev => prev.filter(movie => movie.id !== movieId))
     }
