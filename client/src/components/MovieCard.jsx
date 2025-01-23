@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useMovieContext } from "../context/MovieContext";
 
-export const MovieCard = ({ movie }) => {
+ const MovieCard = ({ movie }) => {
   const { isFavorite, addToFavorites, removeFromFavorites } = useMovieContext()
   const favorite = isFavorite(movie.id);
 
@@ -37,6 +37,8 @@ export const MovieCard = ({ movie }) => {
       </div>
     </div>
 )};
+
+export default MovieCard
 
 MovieCard.propTypes = {
   movie: PropTypes.shape({
