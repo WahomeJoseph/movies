@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
-import React from "react"
-import { createContext, useState, useEffect, useContext } from "react"
+import {createContext, useState, useContext, useEffect} from "react"
+
 const MovieContext = createContext()
-const useMovieContext = () => useContext(MovieContext)
+
+export const useMovieContext = () => useContext(MovieContext)
 
 export const MovieProvider = ({children}) => {
     const [favorites, setFavorites] = useState([])
