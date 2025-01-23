@@ -4,7 +4,7 @@ import { MovieCard } from "../components/MovieCard";
 import { useState, useEffect } from "react";
 import { searchMovies, getPopularMovies } from "../api/Api";
 
-export const Home = () => {
+const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
@@ -74,3 +74,4 @@ export const Home = () => {
   );
 }
 
+export default Home;
