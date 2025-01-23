@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const NavBar = () => {
+const NavBar = () => {
     return (
         <nav className="bg-black p-4 md:p-2 flex justify-between items-center shadow-md">
             <div className="text-xl font-bold md:text-lg">
@@ -15,3 +15,5 @@ export const NavBar = () => {
         </nav>
     );
   }
+
+  export default NavBar;
