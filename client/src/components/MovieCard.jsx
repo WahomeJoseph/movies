@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { useMovieContext } from "../context/MovieContext";
 
  const MovieCard = ({ movie }) => {
+  
   const { isFavorite, addToFavorites, removeFromFavorites } = useMovieContext()
   const favorite = isFavorite(movie.id);
 
