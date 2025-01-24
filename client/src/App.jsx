@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './App.css'
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 
 import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home.jsx'
@@ -15,7 +15,6 @@ export default function App() {
      <Navbar/>
      <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/movie' element={<Moviecard movie={{title: 'Power Book 2', release_date: '2025'}}/>}/>
       <Route path='/favs' element={<Favorites/>}/>
      </Routes>
     </MovieProvider>
