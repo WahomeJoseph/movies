@@ -28,13 +28,13 @@ const Home = () => {
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    if (!search.trim()) return;
+    if (!search.trim()) return
     if (isLoading) return;
 
     setisLoading(true);
     try {
-      const searchResults = await searchMovies(search);
-      setMovies(searchResults);
+      const searchRes = await searchMovies(search);
+      setMovies(searchRes);
       setError(null);
     } catch (err) {
       console.log(err);
@@ -53,16 +53,16 @@ const Home = () => {
           className="flex-1 p-3 border-none rounded bg-gray-800 text-white text-base focus:outline-none focus:shadow-outline-gray"
           value={search}
           onChange={(e) => setSearch(e.target.value)}/>
-        <button type="submit" className="search-button p-3 px-6 bg-red-700 text-white rounded font-medium transition-colors duration-200 whitespace-nowrap hover:bg-red-600">
+        <button type="submit" className="p-3 px-6 bg-red-700 text-white rounded font-medium transition-colors duration-200 whitespace-nowrap hover:bg-red-600">
           Search
         </button>
       </form>
 
       {error && <div className="error-message text-red-500 text-center">{error}</div>}
       {isLoading ? (
-        <div className="loading text-center text-white">Loading...</div>
+        <div className="text-center text-white">Loading the movie...</div>
       ) : (
-        <div className="movies-grid grid gap-6 p-4 w-full box-border" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+        <div className="grid gap-6 p-4 w-full box-border" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
           {movies.map((movie) => (
             movie.title.toLowercase().startsWith(search) && (
             <MovieCard movie={movie} key={movie.id} />)

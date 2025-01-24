@@ -8,8 +8,8 @@ export const Favorites = () => {
 
   if (favorites) {
     return (
-      <div className="p-8 w-full box-border">
-        <h2 className="mb-8 text-center text-4xl text-white" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>Your Favorites</h2>
+      <div id="favs" className="p-8 w-full box-border">
+        <h2 className="mb-8 text-center text-4xl text-white" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>My Likings</h2>
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {favorites.map((movie) => (
             <MovieCard movie={movie} key={movie.id} className="animate-fadeIn"/>

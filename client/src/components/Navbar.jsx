@@ -10,7 +10,7 @@ const NavBar = () => {
             </span>
             <div className="flex items-center gap-8 md:gap-4 md:p-4">
                 <Link to="/" className="text-base p-2 rounded duration-200 hover:bg-white/10">Home</Link>
-                <Link to="/favorites" className="text-base p-2 rounded duration-200 hover:bg-white/10">Favorites</Link>
+                <Link to="/favs" className="text-base p-2 rounded duration-200 hover:bg-white/10">Favorites</Link>
             </div>
         </nav>
     );
