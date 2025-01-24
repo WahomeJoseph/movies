@@ -12,10 +12,13 @@ export default function App() {
   return (
     <MovieProvider>
      <Navbar/>
+     <main>
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/favs' element={<Favorites/>}/>
      </Routes>
+     </main>
+     
     </MovieProvider>
   )
 }

@@ -5,13 +5,13 @@ import { useMovieContext } from "../context/MovieContext";
 import { FaHeart } from "react-icons/fa";
 
  const MovieCard = ({movie}) => {
-  const { isFavorite, addToFavorites, removeFromFavorites } = useMovieContext()
+  const { isFavorite, addToFavs, removeFromFavs } = useMovieContext()
   const favorite = isFavorite(movie.id);
 
   function handleFavs(e) {
     e.preventDefault();
-    if (favorite) removeFromFavorites(movie.id);
-    else addToFavorites(movie);
+    if (favorite) removeFromFavs(movie.id);
+    else addToFavs(movie);
   }
 
   return (
@@ -22,7 +22,7 @@ import { FaHeart } from "react-icons/fa";
           alt={movie.title}
           className="w-full h-full object-cover"/>
         <div id="movieoverlay" className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/80 opacity-0 transition-opacity duration-200 flex flex-col justify-end p-4 hover:opacity-100">
-          <button onClick={handleFavs} className={`absolute top-4 right-4 text-white text-xl p-2 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200 hover:bg-black/80 ${favorite ? "text-[#ff4757]" : ""}`}>
+          <button onClick={handleFavs} className={`${favorite ? 'active text-red-500' : ''}absolute top-4 right-4 text-white text-xl p-2 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200 hover:bg-black/80`}>
             <FaHeart/>
           </button>
         </div>
