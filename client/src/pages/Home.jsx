@@ -2,12 +2,12 @@
 import React from "react";
 import MovieCard from "../components/MovieCard";
 import { useState, useEffect } from "react";
-import { searchMovies, getPopularMovies } from "../api/Api";
+import { searchMovies, getPopularMovies } from "../api/Api.js";
 
 const Home = () => {
-  const [search, setSearch] = useState("");
-  const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(null);
+  const [search, setSearch] = useState("")
+  const [movies, setMovies] = useState([])
+  const [error, setError] = useState(null)
   const [isLoading, setisLoading] = useState(true);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Home = () => {
       }
     };
 
-    loadPopularMovies();
+    loadPopularMovies(); //call the function
   }, []);
 
   const handleSearch = async (e) => {
