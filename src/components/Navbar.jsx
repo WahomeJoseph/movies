@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <nav className="w-full bg-[#030f0f] flex justify-between gap-2 px-20 items-center shadow-md shadow-[#030f0f] text-base sm:flex-row sm:gap-4 md:flex-row sm:text-base">
-            <span className="text-xl text-[#00df82] font-bold md:text-lg">
+        <nav className="w-full bg-[#030f0f] flex justify-between gap-2 px-20 items-center shadow-md shadow-[#030f0f] text-base sm:flex-row sm:mt-0 sm:justify-between sm:gap-4 md:flex-row sm:text-base">
+            <span className="text-xl text-[#00df82] font-bold sm:text-xl md:text-lg">
                 <Link to="/">cinema</Link>
             </span>
             <div className="flex justify-between items-center gap-4 my-2 md:gap-4 md:p-4">
