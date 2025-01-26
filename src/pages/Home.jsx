@@ -46,7 +46,7 @@ const Home = () => {
 
   return (
     <div id="home" className="min-h-screen bg-[#030f0f] flex flex-col justify-center items-center text-white">
-      <form onSubmit={handleSearch} className="max-w-full my-4 flex gap-4 px-4 sm:flex-row md:px-10">
+      <form onSubmit={handleSearch} className="max-w-lg my-4 flex gap-4 px-4 sm:flex-row md:px-10">
         <input
           type="text"
           placeholder="Search for your movies..."
