@@ -50,7 +50,7 @@ const Home = () => {
         <input
           type="text"
           placeholder="Search for your movies..."
-          className="flex-1 p-3 rounded-sm bg-transparent shadow-sm shadow-[#00df82] text-[#00df82] text-base sm:text-sm focus:outline focus:outline-[#00df82] focus:ring-[#00df82] focus:opacity-70"
+          className="flex-1 p-3 rounded-sm bg-transparent shadow-sm shadow-[#00df82] text-[#00df82] text-sm sm:text-sm focus:outline focus:outline-[#00df82] focus:ring-[#00df82] focus:opacity-70"
           value={search}
           onChange={(e) => setSearch(e.target.value)}/>
         <button type="submit" className="p-3 px-6 bg-[#030f0f] shadow-sm shadow-[#00df82] text-white rounded font-medium  duration-200 whitespace-nowrap hover:shadow-sm">
