@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 import { searchMovies, getPopularMovies } from "../api/Api.js";
 
 const Home = () => {
-  const [search, setSearch] = useState("")
-  const [movies, setMovies] = useState([])
-  const [error, setError] = useState(null)
+  const [search, setSearch] = useState("");
+  const [movies, setMovies] = useState([]);
+  const [error, setError] = useState(null);
   const [isLoading, setisLoading] = useState(true);
 
   useEffect(() => {
@@ -23,12 +23,12 @@ const Home = () => {
       }
     };
 
-    loadPopularMovies(); //call the function
+    loadPopularMovies(); // call the function
   }, []);
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    if (!search.trim()) return
+    if (!search.trim()) return;
     if (isLoading) return;
 
     setisLoading(true);
@@ -45,15 +45,15 @@ const Home = () => {
   };
 
   return (
-    <div id="home" className="home px-4 md:px-0 py-8 box-border">
-      <form onSubmit={handleSearch} className="max-w-xl mx-auto mb-8 flex gap-4 px-4 md:px-0 box-border">
+    <div id="home" className="min-h-screen bg-[#030f0f] flex flex-col justify-center items-center text-white">
+      <form onSubmit={handleSearch} className="max-w-full flex gap-4 px-4 md:px-10">
         <input
           type="text"
           placeholder="Search for your movies..."
-          className="flex-1 p-3 border-none rounded bg-gray-800 text-white text-base focus:outline-none focus:shadow-outline-gray"
+          className="flex-2 p-3 rounded-sm bg-transparent shadow-sm shadow-[#00df82] text-[#00df82] text-base focus:outline focus:ring-[#00df82] focus:opacity-70"
           value={search}
           onChange={(e) => setSearch(e.target.value)}/>
-        <button type="submit" className="p-3 px-6 bg-red-700 text-white rounded font-medium transition-colors duration-200 whitespace-nowrap hover:bg-red-600">
+        <button type="submit" className="p-3 px-6 bg-[#030f0f] shadow-sm shadow-[#00df82] text-white rounded font-medium  duration-200 whitespace-nowrap hover:shadow-md">
           Search
         </button>
       </form>
@@ -64,13 +64,12 @@ const Home = () => {
       ) : (
         <div className="grid gap-6 p-4 w-full box-border" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
           {movies.map((movie) => (
-            movie.title.toLowercase().startsWith(search) && (
-            <MovieCard movie={movie} key={movie.id} />)
+            <MovieCard movie={movie} key={movie.id} />
           ))}
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Home;

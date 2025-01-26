@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <nav className="bg-black p-4 flex justify-between items-center shadow-md shadow-[#cccccc]  md:p-2 md:flex sm:text-base">
-            <span className="text-xl font-bold md:text-lg">
+        <nav className="w-full bg-[#030f0f] flex justify-between px-20 items-center shadow-md shadow-[#030f0f] md:flex sm:text-base">
+            <span className="text-xl text-[#00df82] font-bold md:text-lg">
                 <Link to="/">cinema</Link>
             </span>
-            <div className="flex items-center gap-8 md:gap-4 md:p-4">
-                <Link to="/" className="text-base p-2 rounded duration-200 hover:bg-white/10">Home</Link>
-                <Link to="/favs" className="text-base p-2 rounded duration-200 hover:bg-white/10">Favorites</Link>
+            <div className="flex justify-between items-center gap-4 my-2 md:gap-4 md:p-4">
+                <Link to="/" className="text-base p-2 text-[#00df82] rounded-sm hover:shadow-[#00df82] hover:shadow-sm lg:p-4">Home</Link>
+                <Link to="/favs" className="text-base p-2 text-[#00df82] rounded-sm hover:shadow-[#00df82] hover:shadow-sm">Favorites</Link>
             </div>
         </nav>
     );

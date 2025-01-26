@@ -20,9 +20,9 @@ export const Favorites = () => {
   }
 
   return (
-    <div className="text-center p-16 bg-white bg-opacity-5 rounded-xl m-8 max-w-lg mx-auto">
+    <div className="bg-[#030f0f] text-center p-16 bg-opacity-5 p-4 rounded-lg shadow-sm m-8 max-w-lg mx-auto">
       <h2 className="mb-4 text-2xl text-red-600">No Favorite Movies Yet</h2>
-      <p className="text-gray-400 text-xl leading-loose">Start adding movies to your favorites and they will appear here!</p>
+      <p className="text-[#00df82] text-xl leading-loose">Choose movies to add to your favourites and watch later!</p>
     </div>
   );
 }
