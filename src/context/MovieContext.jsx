@@ -1,5 +1,5 @@
-
-import { createContext, useState, useEffect, useContext } from "react"
+/* eslint-disable no-unused-vars */
+import React, { createContext, useState, useEffect, useContext } from "react"
 import PropTypes from 'prop-types'
 
 const MovieContext = createContext()

@@ -18,11 +18,11 @@ import { FaHeart } from "react-icons/fa";
     <div id="movie" className="relative rounded-lg overflow-hidden bg-[#1a1a1a] transition-transform duration-200 h-full flex flex-col hover:translate-y-[-5px]">
       <div id="movieposter" className="relative aspect-[2/3] w-full">
         <img
-          src={`hhtps://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
           className="w-full h-full object-cover"/>
-        <div id="movieoverlay" className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/80 opacity-0 transition-opacity duration-200 flex flex-col justify-end p-4 hover:opacity-100">
-          <button onClick={handleFavs} className={`${favorite ? 'active text-red-500' : ''}absolute top-4 right-4 text-white text-xl p-2 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200 hover:bg-black/80`}>
+        <div id="moverlay" className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/80 opacity-0 transition-opacity duration-200 flex flex-col justify-end p-6 hover:opacity-100">
+          <button onClick={handleFavs} className={`${favorite ? 'active text-red-500' : 'text-[#fffff]'} absolute top-4 right-4 text-white text-xl p-2 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-[#030f0f]`}>
             <FaHeart/>
           </button>
         </div>
