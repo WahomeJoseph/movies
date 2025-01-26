@@ -10,12 +10,13 @@ import { FaHeart } from "react-icons/fa";
 
   function handleFavs(e) {
     e.preventDefault();
+    console.log('Fav Added', favorite, movie.id);
     if (favorite) removeFromFavs(movie.id);
     else addToFavs(movie);
   }
 
   return (
-    <div id="movie" className="relative rounded-lg overflow-hidden bg-[#1a1a1a] transition-transform duration-200 h-full flex flex-col hover:translate-y-[-5px]">
+    <div id="movie" className="relative rounded-lg shadow-sm shadow-[#00df82] overflow-hidden bg-[#1a1a1a] transition-transform duration-200 h-full flex flex-col hover:translate-y-[-5px]">
       <div id="movieposter" className="relative aspect-[2/3] w-full">
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

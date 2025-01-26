@@ -46,14 +46,14 @@ const Home = () => {
 
   return (
     <div id="home" className="min-h-screen bg-[#030f0f] flex flex-col justify-center items-center text-white">
-      <form onSubmit={handleSearch} className="max-w-full flex gap-4 px-4 md:px-10">
+      <form onSubmit={handleSearch} className="max-w-full my-4 flex gap-4 px-4 md:px-10">
         <input
           type="text"
           placeholder="Search for your movies..."
-          className="flex-2 p-3 rounded-sm bg-transparent shadow-sm shadow-[#00df82] text-[#00df82] text-base focus:outline focus:ring-[#00df82] focus:opacity-70"
+          className="flex-1 p-3 rounded-sm bg-transparent shadow-sm shadow-[#00df82] text-[#00df82] text-base focus:outline focus:outline-[#00df82] focus:ring-[#00df82] focus:opacity-70"
           value={search}
           onChange={(e) => setSearch(e.target.value)}/>
-        <button type="submit" className="p-3 px-6 bg-[#030f0f] shadow-sm shadow-[#00df82] text-white rounded font-medium  duration-200 whitespace-nowrap hover:shadow-md">
+        <button type="submit" className="p-3 px-6 bg-[#030f0f] shadow-sm shadow-[#00df82] text-white rounded font-medium  duration-200 whitespace-nowrap hover:shadow-sm">
           Search
         </button>
       </form>
