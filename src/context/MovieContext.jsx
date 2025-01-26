@@ -9,7 +9,7 @@ export const MovieProvider = ({children}) => {
     const [favs, setFavs] = useState([])
 
     useEffect(() => {
-        const storedFavs = localStorage.getItem("favorites") 
+        const storedFavs = localStorage.getItem('favorites') 
         if (storedFavs) setFavs(JSON.parse(storedFavs)) //check for any favs in local storage
     }, [])
 

@@ -10,7 +10,7 @@ import { FaHeart } from "react-icons/fa";
 
   function handleFavs(e) {
     e.preventDefault();
-    console.log('Fav Added', favorite, movie.id);
+    console.log('Fav Added to Favs', favorite, movie.id);
     if (favorite) removeFromFavs(movie.id);
     else addToFavs(movie);
   }
@@ -29,9 +29,9 @@ import { FaHeart } from "react-icons/fa";
         </div>
       </div>
 
-      <div id="minfo" className="p-4 flex-1 flex flex-col gap-2 md:p-3">
+      <div id="minfo" className="bg-[#030f0f] p-4 flex-1 flex flex-col gap-2 md:p-3">
         <h3 className="text-lg md:text-base">{movie.title}</h3>
-        <span className="text-gray-600 text-sm">{movie.release_date?.split("-")[0]}</span>
+        <span className="text-[#1f1] text-sm">{movie.release_date?.split("-")[0]}</span>
       </div>
     </div>
 )};
